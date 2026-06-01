@@ -1,6 +1,7 @@
 class Customer {
     private String name;
     private String size;
+    private Clothing[] items;
 
     public void setName(String newName) {
         name = newName;
@@ -32,5 +33,23 @@ class Customer {
 
     public String getSize() {
         return size;
+    }
+
+    public void addItems(Clothing[] items) {
+        this.items = items;
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
+
+    public double getTotalClothingCost() {
+        double total = 0.0;
+
+        for (Clothing clothing : items) {
+            total += clothing.getPrice();
+        }
+
+        return total;
     }
 }

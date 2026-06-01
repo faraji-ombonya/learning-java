@@ -30,24 +30,15 @@ class ShopApp {
 
         Clothing[] items = { item1, item2, item3, item4 };
 
-        // IO.println(item1.description + "," + item1.price + "," + item1.size);
-        // IO.println(item2.description + "," + item2.price + "," + item2.size);
+        c1.addItems(items);
 
-        // double totalBeforeTax = (item1.price) + (item2.price * 2);
-        // total = totalBeforeTax + (totalBeforeTax * tax);
-
-        for (Clothing item : items) {
+        for (Clothing item : c1.getItems()) {
             if (c1.getSize().equals(item.getSize())) {
-                total += item.getPrice();
                 IO.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
-            }
-
-            if (total > 15) {
-                break;
             }
         }
 
-        IO.println("Total: " + total);
+        IO.println("Total: " + c1.getTotalClothingCost());
 
         c1.setSize(measurement);
 
