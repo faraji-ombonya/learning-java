@@ -44,6 +44,7 @@ class Clothing {
         return price + (price * TAX_RATE);
     }
 
+    @Override
     public String toString() {
         return getDescription() + ", " + getPrice() + ", " + getSize();
     }
