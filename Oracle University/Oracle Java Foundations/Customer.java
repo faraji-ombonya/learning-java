@@ -57,4 +57,21 @@ class Customer {
 
         return total;
     }
+
+    public double calculateAveragePrice() {
+
+        int total = 0;
+        int count = 0;
+
+        for (Clothing clothing : items) {
+            if (clothing.getSize().equals("L")) {
+
+                total += clothing.getPrice();
+            }
+        }
+
+        IO.println("TOT:: " + total + " Count::" + count);
+
+        return total / count;
+    }
 }

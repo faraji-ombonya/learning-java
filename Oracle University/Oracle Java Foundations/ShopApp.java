@@ -27,5 +27,11 @@ class ShopApp {
 
         c1.setSize(measurement);
 
+        try {
+            IO.println("Average: " + c1.calculateAveragePrice());
+        } catch (ArithmeticException e) {
+            IO.println("someone tried to divide by zero");
+        }
+
     }
 }
