@@ -2,8 +2,10 @@ class ShopApp {
     public static void main(String[] args) {
         double tax = 0.2;
         double total;
+        int measurement = 3;
         Customer c1 = new Customer();
         c1.setName("Pinky");
+        c1.size = "S";
         IO.println("Hello " + c1.getName());
 
         Clothing item1 = new Clothing();
@@ -25,5 +27,19 @@ class ShopApp {
         total = totalBeforeTax + (totalBeforeTax * tax);
 
         IO.println("Total: " + total);
+
+        switch (measurement) {
+            case 1, 2, 3:
+                c1.size = "S";
+                break;
+            case 4, 5, 6:
+                c1.size = "M";
+                break;
+            case 7, 8, 9:
+                c1.size = "L";
+                break;
+            default:
+                c1.size = "X";
+        }
     }
 }
