@@ -49,18 +49,7 @@ class ShopApp {
 
         IO.println("Total: " + total);
 
-        switch (measurement) {
-            case 1, 2, 3:
-                c1.setSize("S");
-                break;
-            case 4, 5, 6:
-                c1.setSize("M");
-                break;
-            case 7, 8, 9:
-                c1.setSize("L");
-                break;
-            default:
-                c1.setSize("X");
-        }
+        c1.setSize(measurement);
+
     }
 }
