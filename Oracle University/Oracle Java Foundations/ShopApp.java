@@ -4,6 +4,10 @@ class ShopApp {
         Customer c1 = new Customer("Pinky", 3);
         IO.println("Hello " + c1.getName());
 
+        IO.println("Min price: " + Clothing.MINIMUM_PRICE);
+
+        System.out.println();
+
         Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
         Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
         Clothing item3 = new Clothing("Green Sscarf", 5, "S");

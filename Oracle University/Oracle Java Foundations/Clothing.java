@@ -1,6 +1,6 @@
 class Clothing {
-    public final double MINIMUM_PRICE = 10.0;
-    public final double TAX_RATE = 0.2;
+    public static final double MINIMUM_PRICE = 10.0;
+    public static final double TAX_RATE = 0.2;
     private String description;
     private double price;
     private String size = "M";
