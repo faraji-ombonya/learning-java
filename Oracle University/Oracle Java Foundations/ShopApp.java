@@ -1,32 +1,13 @@
 class ShopApp {
     public static void main(String[] args) {
-        double tax = 0.2, total = 0.0;
         int measurement = 3;
-        Customer c1 = new Customer();
-        c1.setName("Pinky");
-        c1.setSize("S");
+        Customer c1 = new Customer("Pinky", 3);
         IO.println("Hello " + c1.getName());
 
-        Clothing item1 = new Clothing();
-        Clothing item2 = new Clothing();
-        Clothing item3 = new Clothing();
-        Clothing item4 = new Clothing();
-
-        item1.setDescription("Blue Jacket");
-        item1.setPrice(20.9);
-        item1.setSize("M");
-
-        item2.setDescription("Orange T-Shirt");
-        item2.setPrice(10.5);
-        item2.setSize("S");
-
-        item3.setDescription("Green Sscarf");
-        item3.setPrice(5);
-        item3.setSize("S");
-
-        item4.setDescription("Blue T-Shirt");
-        item4.setPrice(10.5);
-        item4.setSize("S");
+        Clothing item1 = new Clothing("Blue Jacket", 20.9, "M");
+        Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
+        Clothing item3 = new Clothing("Green Sscarf", 5, "S");
+        Clothing item4 = new Clothing("Blue T-Shirt", 10.5, "S");
 
         Clothing[] items = { item1, item2, item3, item4 };
 

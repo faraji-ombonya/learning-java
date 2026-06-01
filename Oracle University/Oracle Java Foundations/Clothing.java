@@ -5,6 +5,12 @@ class Clothing {
     private double price;
     private String size = "M";
 
+    public Clothing(String description, double price, String size) {
+        setDescription(description);
+        setPrice(price);
+        setSize(size);
+    }
+
     public void setDescription(String description) {
         this.description = description;
 

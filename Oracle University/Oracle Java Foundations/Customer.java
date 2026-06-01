@@ -3,6 +3,11 @@ class Customer {
     private String size;
     private Clothing[] items;
 
+    public Customer(String name, int measurement) {
+        this.name = name;
+        setSize(measurement);
+    }
+
     public void setName(String newName) {
         name = newName;
     }
