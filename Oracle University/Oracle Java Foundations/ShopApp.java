@@ -19,7 +19,7 @@ class ShopApp {
 
         for (Clothing item : c1.getItems()) {
             if (c1.getSize().equals(item.getSize())) {
-                IO.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
+                IO.println(item);
             }
         }
 

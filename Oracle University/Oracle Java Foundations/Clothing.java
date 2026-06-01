@@ -43,4 +43,8 @@ class Clothing {
     public double getPrice() {
         return price + (price * TAX_RATE);
     }
+
+    public String toString() {
+        return getDescription() + ", " + getPrice() + ", " + getSize();
+    }
 }
