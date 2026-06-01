@@ -9,8 +9,8 @@ class ShopApp {
 
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
-
-        Clothing[] items = { item1, item2 };
+        Clothing item3 = new Clothing();
+        Clothing item4 = new Clothing();
 
         item1.description = "Blue Jacket";
         item1.price = 20.9;
@@ -20,21 +20,30 @@ class ShopApp {
         item2.price = 10.5;
         item2.size = "S";
 
+        item3.description = "Green Sscarf";
+        item3.price = 5;
+        item3.size = "S";
+
+        item4.description = "Blue T-Shirt";
+        item4.price = 10.5;
+        item4.size = "S";
+
+        Clothing[] items = { item1, item2, item3, item4 };
+
         // IO.println(item1.description + "," + item1.price + "," + item1.size);
         // IO.println(item2.description + "," + item2.price + "," + item2.size);
-
-        for (Clothing clothing : items) {
-            if (c1.size == clothing.size) {
-                IO.println(clothing.description + "," + clothing.price + "," + clothing.size);
-            }
-        }
 
         // double totalBeforeTax = (item1.price) + (item2.price * 2);
         // total = totalBeforeTax + (totalBeforeTax * tax);
 
         for (Clothing item : items) {
-            if (c1.size == item.size) {
+            if (c1.size.equals(item.size)) {
                 total += item.price + (item.price * tax);
+                IO.println(item.description + "," + item.price + "," + item.size);
+            }
+
+            if (total > 15) {
+                break;
             }
         }
 
