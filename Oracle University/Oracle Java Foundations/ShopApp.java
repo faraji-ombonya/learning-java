@@ -4,7 +4,7 @@ class ShopApp {
         int measurement = 3;
         Customer c1 = new Customer();
         c1.setName("Pinky");
-        c1.size = "S";
+        c1.setSize("S");
         IO.println("Hello " + c1.getName());
 
         Clothing item1 = new Clothing();
@@ -12,21 +12,21 @@ class ShopApp {
         Clothing item3 = new Clothing();
         Clothing item4 = new Clothing();
 
-        item1.description = "Blue Jacket";
-        item1.price = 20.9;
-        item1.size = "M";
+        item1.setDescription("Blue Jacket");
+        item1.setPrice(20.9);
+        item1.setSize("M");
 
-        item2.description = "Orange T-Shirt";
-        item2.price = 10.5;
-        item2.size = "S";
+        item2.setDescription("Orange T-Shirt");
+        item2.setPrice(10.5);
+        item2.setSize("S");
 
-        item3.description = "Green Sscarf";
-        item3.price = 5;
-        item3.size = "S";
+        item3.setDescription("Green Sscarf");
+        item3.setPrice(5);
+        item3.setSize("S");
 
-        item4.description = "Blue T-Shirt";
-        item4.price = 10.5;
-        item4.size = "S";
+        item4.setDescription("Blue T-Shirt");
+        item4.setPrice(10.5);
+        item4.setSize("S");
 
         Clothing[] items = { item1, item2, item3, item4 };
 
@@ -37,9 +37,9 @@ class ShopApp {
         // total = totalBeforeTax + (totalBeforeTax * tax);
 
         for (Clothing item : items) {
-            if (c1.size.equals(item.size)) {
-                total += item.price + (item.price * tax);
-                IO.println(item.description + "," + item.price + "," + item.size);
+            if (c1.getSize().equals(item.getSize())) {
+                total += item.getPrice();
+                IO.println(item.getDescription() + "," + item.getPrice() + "," + item.getSize());
             }
 
             if (total > 15) {
@@ -51,16 +51,16 @@ class ShopApp {
 
         switch (measurement) {
             case 1, 2, 3:
-                c1.size = "S";
+                c1.setSize("S");
                 break;
             case 4, 5, 6:
-                c1.size = "M";
+                c1.setSize("M");
                 break;
             case 7, 8, 9:
-                c1.size = "L";
+                c1.setSize("L");
                 break;
             default:
-                c1.size = "X";
+                c1.setSize("X");
         }
     }
 }

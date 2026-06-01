@@ -1,12 +1,20 @@
 class Customer {
-    String name;
-    String size;
+    private String name;
+    private String size;
 
-    void setName(String newName) {
+    public void setName(String newName) {
         name = newName;
     }
 
-    String getName() {
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getName() {
         return name;
+    }
+
+    public String getSize() {
+        return size;
     }
 }
